@@ -1,14 +1,15 @@
 public class Year {
     int year;
-    public void setYear(int number){
-        if((number<2002)||(number>2022)){
+
+    public void setYear(int number) {
+        if ((number < 2002) || (number > 2022)) {
             System.out.println("неверное значение года");
-        }
-        else{
+        } else {
             year = number;
         }
     }
-    public int getYear(){
+
+    public int getYear() {
         return year;
     }
 }

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         double mounthly = 150000.00; //ежемесячный расход
@@ -11,5 +12,6 @@ public class Main {
         int i = fireYTN.giveYTN(fireYear.getYear());
         CountStock fireCM = new CountStock();
         fireCM.setCountMoney(i, mounthly);
+        Round.roundStock(fireCM.totalSum / fireCM.maxWithdrowal);
     }
 }
