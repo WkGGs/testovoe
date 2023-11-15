@@ -9,9 +9,19 @@ public class Main {
         Year fireYear = new Year();
         fireYear.setYear(str);
         YTN fireYTN = new YTN();
-        int i = fireYTN.giveYTN(fireYear.getYear());
-        CountStock fireCM = new CountStock();
-        fireCM.setCountMoney(i, mounthly);
-        Round.roundStock(fireCM.totalSum / fireCM.maxWithdrowal);
+        fireYTN.setYTN(str);
+        //System.out.println(fireYTN.getYTN());
+        Calculator FireCalculator = new Calculator();
+        double percent = 0.5;
+        for(double i = percent; i < 25.0; i += 0.5){
+            FireCalculator.setPercent(i);
+            if(FireCalculator.fireCalculator(fireYTN.getYTN())){
+                continue;
+            }
+            else {
+                System.out.println(i - 0.5);
+                break;
+            }
+        }
     }
 }
