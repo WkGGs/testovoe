@@ -1,15 +1,11 @@
 public class Calculator {
     double percent;
-    boolean hvataet;
+    boolean enough;
     double summ;
     double yearly = 150000 * 12;//сколько мы тратим за год без учета инфляции
 
     public void setPercent(double x) {
         percent = x;
-    }
-
-    public boolean getHvataet() {
-        return hvataet;
     }
 
     public boolean fireCalculator(int x) {
@@ -28,10 +24,10 @@ public class Calculator {
 
         }
         if (summ > 0) {
-            hvataet = true;
+            enough = true;
         } else {
-            hvataet = false;
+            enough = false;
         }
-        return hvataet;
+        return enough;
     }
 }

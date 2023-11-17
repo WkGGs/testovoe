@@ -1,5 +1,11 @@
 public class YTN {
-    public int giveYTN(int year) {
-        return (year - 2002);
+    int ytn;
+
+    public void setYTN(int year) {
+        ytn = (year - 2002);
+    }
+
+    public int getYTN() {
+        return ytn;
     }
 }
